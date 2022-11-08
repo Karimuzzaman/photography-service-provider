@@ -13,6 +13,7 @@ const Servicehome = () => {
     }, [])
     return (
         <div>
+            <h2 className='text-3xl font-bold mt-10'>Our Services: </h2>
             <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 bg-emerald-400 mt-10 gap-5'>
                 {
                     services.map(service =>
