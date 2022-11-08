@@ -1,27 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
         <footer className="footer p-10 bg-neutral text-neutral-content mt-5 mb-5">
             <div>
                 <span className="footer-title">Services</span>
-                <a className="link link-hover">Wild Photography</a>
-                <a className="link link-hover">Weeding Ceremony</a>
-                <a className="link link-hover">Sports Photography</a>
-                <a className="link link-hover">Journalism Photography</a>
+                <Link>Wild Photography  </Link>
+                <Link>Weeding Ceremony</Link>
+                <Link>Sports Photography</Link>
+                <Link>Journalism Photography</Link>
+
             </div>
             <div>
                 <span className="footer-title">Company</span>
-                <a className="link link-hover">About us</a>
-                <a className="link link-hover">Equipments</a>
-                <a className="link link-hover">Honest</a>
-                <a className="link link-hover">Loyalty</a>
+                <Link>About us</Link>
+                <Link>Equipments</Link>
+                <Link>Honesty</Link>
+                <Link>Loyalty</Link>
             </div>
             <div>
                 <span className="footer-title">Legal</span>
-                <a className="link link-hover">Terms of use</a>
-                <a className="link link-hover">Privacy policy</a>
-                <a className="link link-hover">2022 All Rights Reserved</a>
+                <Link>Terms of use</Link>
+                <Link>Privacy policy</Link>
+                <Link>2022 All Rights Reserved</Link>
             </div>
         </footer>
     );
