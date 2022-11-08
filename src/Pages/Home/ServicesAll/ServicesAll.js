@@ -6,7 +6,6 @@ const ServicesAll = () => {
         fetch('http://localhost:5000/servicesAll')
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 setServices(data);
             })
     }, [])
@@ -14,7 +13,7 @@ const ServicesAll = () => {
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-6 bg-purple-300 gap-5'>
             {
                 services.map(service =>
-                    <div key={service._id} className="card w-96 bg-base-100 shadow-xl mb-5 bg-rose-200">
+                    <div key={service._id} className="mt-5 card w-96 bg-base-100 shadow-xl mb-5 bg-rose-200 ml-3">
                         <figure className="px-10 pt-10">
                             <img src={service.img} alt="" className="rounded-xl" />
                         </figure>
