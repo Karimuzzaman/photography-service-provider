@@ -11,7 +11,7 @@ const ServicesAll = () => {
             })
     }, [])
     return (
-        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-6 bg-purple-300'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-6 bg-purple-300 gap-5'>
             {
                 services.map(service =>
                     <div key={service._id} className="card w-96 bg-base-100 shadow-xl mb-5 bg-rose-200">
