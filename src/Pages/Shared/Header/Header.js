@@ -1,17 +1,34 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
     return (
         <div className="navbar bg-zinc-400 mt-5">
             <div className="flex-1 ">
                 <Link className='mr-6 text-2xl text-purple-800' to='/'>Home</Link>
-                <Link className='mr-6 text-2xl text-purple-800' to='/'>Login</Link>
+                <Link className='mr-6 text-2xl text-purple-800' to='/login'>Login</Link>
                 <Link className='text-2xl text-purple-800' to='/'>Blog</Link>
             </div>
             <div className="flex-none gap-2">
                 <div className="form-control">
-                    {/* input */}
+                    {
+                        user?.uid ?
+                            <>
+                                <button onClick={handleLogOut} className="btn btn-active btn-ghost">Logout</button>
+                            </>
+                            :
+                            <>
+                                <Link className='text-2xl text-purple-800' to="/login">Login</Link>
+                            </>
+                    }
                 </div>
 
             </div>
