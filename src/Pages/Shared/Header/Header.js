@@ -15,20 +15,24 @@ const Header = () => {
             <div className="flex-1 ">
                 <Link className='mr-6 text-2xl text-purple-800' to='/'>Home</Link>
                 <Link className='mr-6 text-2xl text-purple-800' to='/login'>Login</Link>
-                <Link className='text-2xl text-purple-800' to='/'>Blog</Link>
+                <Link className='text-2xl text-purple-800 mr-6' to='/'>Blog</Link>
+                {
+                    user?.uid ?
+                        <>
+                            <button onClick={handleLogOut} className="btn btn-active btn-ghost mr-6">Logout</button>
+                            <Link className='text-2xl text-purple-800 mr-6'>My Reviews</Link>
+                            <Link className='text-2xl text-purple-800 mr-6'>Add Services </Link>
+
+                        </>
+                        :
+                        <>
+                            <Link className='text-2xl text-purple-800' to="/login">Login</Link>
+                        </>
+                }
             </div>
             <div className="flex-none gap-2">
                 <div className="form-control">
-                    {
-                        user?.uid ?
-                            <>
-                                <button onClick={handleLogOut} className="btn btn-active btn-ghost">Logout</button>
-                            </>
-                            :
-                            <>
-                                <Link className='text-2xl text-purple-800' to="/login">Login</Link>
-                            </>
-                    }
+
                 </div>
 
             </div>
