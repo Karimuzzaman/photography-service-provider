@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
+import { Link } from 'react-router-dom';
 
 const ServicesAll = () => {
     const [services, setServices] = useState([]);
@@ -30,7 +31,7 @@ const ServicesAll = () => {
                             <p><span className='font-bold'>Price:</span> {service.price} bdt</p>
                             <p><span className='font-bold'>Rating:</span> {service.rating}</p>
                             <div className="card-actions">
-                                <button className="btn btn-primary">View Details</button>
+                                <Link to={`/services/${service._id}`}><button className="btn btn-primary">View Details</button></Link>
                             </div>
                         </div>
                     </div>)
