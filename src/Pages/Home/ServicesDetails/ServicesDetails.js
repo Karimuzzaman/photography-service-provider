@@ -13,6 +13,7 @@ const ServicesDetails = () => {
     const { name2, events2, description2 } = second;
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);
+
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?service=${_id}`)
             .then(res => res.json())
@@ -51,7 +52,7 @@ const ServicesDetails = () => {
             .then(data => {
 
                 if (data.acknowledged) {
-                    alert('Order placed successfully')
+                    alert('Reviews Added successfully')
                     form.reset();
 
                 }
@@ -106,16 +107,20 @@ const ServicesDetails = () => {
             <div>
                 <h2 className='mt-5 text-4xl '>Post Your Review:</h2>
                 {
-                    user?.uid ?
-                        <form onSubmit={handleAddReview}>
-                            <textarea name='message' className="textarea textarea-primary mt-6 w-full" placeholder="Your Review"></textarea>
-                            <button className="btn btn-secondary mt-5">Add Review</button>
-                        </form>
+                    user?.uid &&
 
-                        :
 
-                        <p className=' text-4xl text-amber-700'>Please login to add a review. <Link className='font-bold text-red-800' to='/login'>Login</Link></p>
+                    <form onSubmit={handleAddReview}>
+                        <textarea name='message' className="textarea textarea-primary mt-6 w-full" placeholder="Your Review" required></textarea>
+                        <button className="btn btn-secondary mt-5">Add Review</button>
+                    </form>
+                }
+            </div>
+            <div>
+                {
+                    !user?.uid &&
 
+                    <p className=' text-4xl text-amber-700'>Please login to add a review. <Link className='font-bold text-red-800' to='/login'>Login</Link></p>
                 }
             </div>
         </div>

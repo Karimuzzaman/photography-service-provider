@@ -14,7 +14,7 @@ const ServicesReview = ({ review }) => {
                         <th>Name</th>
                         <th>Review</th>
                         <th>Image</th>
-                        <th></th>
+
                     </tr>
                 </thead>
                 <tbody>
