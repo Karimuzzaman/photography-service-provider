@@ -13,6 +13,7 @@ const Servicehome = () => {
                 setServices(data)
             })
     }, [])
+
     return (
         <div>
             <h2 className='text-3xl font-bold mt-10'>Our Services: </h2>
