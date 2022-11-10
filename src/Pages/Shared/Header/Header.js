@@ -21,7 +21,7 @@ const Header = () => {
                         <>
                             <button onClick={handleLogOut} className="btn btn-active btn-ghost mr-6">Logout</button>
                             <Link to='/myreview' className='text-2xl text-purple-800 mr-6'>My Reviews</Link>
-                            <Link className='text-2xl text-purple-800 mr-6'>Add Services </Link>
+                            <Link to='/addservices' className='text-2xl text-purple-800 mr-6'>Add Services </Link>
 
                         </>
                         :

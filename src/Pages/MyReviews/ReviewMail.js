@@ -51,6 +51,7 @@ const ReviewMail = ({ review, handleDelete }) => {
                                 <div>
                                     <button className='btn btn-ghost' onClick={() => handleDelete(_id)}>X</button>
                                     <ToastContainer />
+
                                 </div>
                             </td>
                             <td>

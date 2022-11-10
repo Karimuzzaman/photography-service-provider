@@ -34,7 +34,9 @@ const MyReviews = () => {
                         toast("Review Deleted successfully");
                         const remaining = reviews.filter(odr => odr._id !== id);
                         setReviews(remaining);
+
                     }
+
 
                 })
         }
