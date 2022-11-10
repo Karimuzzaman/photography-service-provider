@@ -152,7 +152,7 @@ const Blog = () => {
         focus:outline-none
       " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
                         aria-controls="collapseFour">
-                        Accordion Item #4
+                        How does NodeJS handle multiple requests at the same time?
                     </button>
                 </h2>
                 <div id="collapseFour" className="accordion-collapse collapse show" aria-labelledby="headingFour"
