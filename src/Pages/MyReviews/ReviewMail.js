@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -22,6 +23,7 @@ const ReviewMail = ({ review, handleDelete }) => {
                             <th>Image</th>
                             <th>Delete</th>
                             <th>Edit</th>
+                            <th>Service Name</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -56,7 +58,13 @@ const ReviewMail = ({ review, handleDelete }) => {
                             </td>
                             <td>
                                 <div>
-                                    <button>Edit</button>
+                                    <Link to={`/myreview/${_id}`}><button className='btn btn-ghost'>Edit Review</button></Link>
+
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    {serviceName}
                                 </div>
                             </td>
 
