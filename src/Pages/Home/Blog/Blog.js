@@ -73,7 +73,7 @@ const Blog = () => {
         focus:outline-none
       " type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
                         aria-controls="collapseTwo">
-                        Accordion Item #2
+                        What is JWT, and how does it work?
                     </button>
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
