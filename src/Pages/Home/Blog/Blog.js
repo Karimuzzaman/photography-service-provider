@@ -5,7 +5,7 @@ const Blog = () => {
         <div className="accordion" id="accordionExample">
             <div className="accordion-item bg-white border border-gray-200">
                 <h2 className="accordion-header mb-0" id="headingOne">
-                    <button className="
+                    <button className=" text-3xl font-semibold text-sky-800 
         accordion-button
         relative
         flex
@@ -13,8 +13,8 @@ const Blog = () => {
         w-full
         py-4
         px-5
-        text-base text-gray-800 text-left
-        bg-white
+     text-left
+        bg-amber-100
         border-0
         rounded-none
         transition
@@ -24,7 +24,7 @@ const Blog = () => {
                         Difference between SQL and NoSQL?
                     </button>
                 </h2>
-                <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
+                <div id="collapseOne" className="accordion-collapse collapse show text-3xl text-gray-800 font-semibold bg-violet-100" aria-labelledby="headingOne"
                     data-bs-parent="#accordionExample">
                     <div className="accordion-body py-4 px-5">
                         <strong>Answer:</strong> Type –
@@ -56,7 +56,7 @@ const Blog = () => {
             </div>
             <div className="accordion-item bg-white border border-gray-200">
                 <h2 className="accordion-header mb-0" id="headingTwo">
-                    <button className="
+                    <button className=" text-3xl font-semibold text-sky-800
         accordion-button
         collapsed
         relative
@@ -65,8 +65,8 @@ const Blog = () => {
         w-full
         py-4
         px-5
-        text-base text-gray-800 text-left
-        bg-white
+         text-left
+        bg-indigo-300
         border-0
         rounded-none
         transition
@@ -78,7 +78,7 @@ const Blog = () => {
                 </h2>
                 <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo"
                     data-bs-parent="#accordionExample">
-                    <div className="accordion-body py-4 px-5">
+                    <div className="accordion-body py-4 px-5 text-3xl text-gray-800 font-semibold bg-fuchsia-100">
                         <strong>Answer:</strong> JWT or JSON Web Token, is an open standard used to share security information between two parties — a client and a server. Each JWT contains encoded JSON objects, including a set of claims. JWTs are signed using a cryptographic algorithm to ensure that the claims cannot be altered after the token is issued. <br /> <br />
 
                         JWTs differ from other web tokens in that they contain a set of claims. Claims are used to transmit information between two parties. What these claims are depends on the use case at hand. For example, a claim may assert who issued the token, how long it is valid for, or what permissions the client has been granted.
@@ -101,7 +101,7 @@ const Blog = () => {
             </div>
             <div className="accordion-item bg-white border border-gray-200">
                 <h2 className="accordion-header mb-0" id="headingThree">
-                    <button className="
+                    <button className=" text-3xl font-semibold text-sky-800
         accordion-button
         collapsed
         relative
@@ -110,8 +110,8 @@ const Blog = () => {
         w-full
         py-4
         px-5
-        text-base text-gray-800 text-left
-        bg-white
+         text-left
+        bg-red-100
         border-0
         rounded-none
         transition
@@ -123,8 +123,8 @@ const Blog = () => {
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
-                    <div className="accordion-body py-4 px-5">
-                        <strong>Answer</strong> Javascript is a programming language that is used for writing scripts on the website. NodeJS is a Javascript runtime environment. <br /> <br />
+                    <div className="accordion-body py-4 px-5 text-3xl text-gray-800 font-semibold bg-orange-100">
+                        <strong>Answer:</strong> Javascript is a programming language that is used for writing scripts on the website. NodeJS is a Javascript runtime environment. <br /> <br />
                         Javascript can only be run in the browsers. We can run Javascript outside the browser with the help of NodeJS. <br /> <br />
                         Javascript basically used on the client-side.NodeJS mostly used on the server-side. <br /> <br />
                         Javascript can run in any browser engine as like JS core in safari and Spidermonkey in Firefox.
@@ -136,7 +136,7 @@ const Blog = () => {
             </div>
             <div className="accordion-item bg-white border border-gray-200">
                 <h2 className="accordion-header mb-0" id="headingFour">
-                    <button className="
+                    <button className=" text-3xl font-semibold text-sky-800 
         accordion-button
         relative
         flex
@@ -144,8 +144,8 @@ const Blog = () => {
         w-full
         py-4
         px-5
-        text-base text-gray-800 text-left
-        bg-white
+         text-left
+        bg-red-200
         border-0
         rounded-none
         transition
@@ -157,13 +157,10 @@ const Blog = () => {
                 </h2>
                 <div id="collapseFour" className="accordion-collapse collapse show" aria-labelledby="headingFour"
                     data-bs-parent="#accordionExample">
-                    <div className="accordion-body py-4 px-5">
-                        <strong>This is the first item's accordion body.</strong> It is shown by default,
-                        until the collapse plugin adds the appropriate classNamees that we use to style each
-                        element. These classNamees control the overall appearance, as well as the showing and
-                        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                        our default variables. It's also worth noting that just about any HTML can go within
-                        the <code>.accordion-body</code>, though the transition does limit overflow.
+                    <div className="accordion-body py-4 px-5 text-3xl text-gray-800 font-semibold bg-emerald-100">
+                        <strong>Answer:</strong> NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. EventLoop is the listener for the EventQueue. <br /> <br />
+
+                        If NodeJS can process the request without I/O blocking then the event loop would itself process the request and sends the response back to the client by itself. But, it is possible to process multiple requests parallelly using the NodeJS cluster module or worker_threads module.
                     </div>
                 </div>
             </div>
