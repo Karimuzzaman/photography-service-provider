@@ -124,12 +124,13 @@ const Blog = () => {
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div className="accordion-body py-4 px-5">
-                        <strong>Answer</strong> It is hidden by default,
-                        until the collapse plugin adds the appropriate classNamees that we use to style each
-                        element. These classNamees control the overall appearance, as well as the showing and
-                        hiding via CSS transitions. You can modify any of this with custom CSS or overriding
-                        our default variables. It's also worth noting that just about any HTML can go within
-                        the <code>.accordion-body</code>, though the transition does limit overflow.
+                        <strong>Answer</strong> Javascript is a programming language that is used for writing scripts on the website. NodeJS is a Javascript runtime environment. <br /> <br />
+                        Javascript can only be run in the browsers. We can run Javascript outside the browser with the help of NodeJS. <br /> <br />
+                        Javascript basically used on the client-side.NodeJS mostly used on the server-side. <br /> <br />
+                        Javascript can run in any browser engine as like JS core in safari and Spidermonkey in Firefox.
+                        V8 is the Javascript engine inside of node.js that parses and runs Javascript. <br /> <br />
+                        Javascript is the upgraded version of ECMA script that uses Chrome’s V8 engine written in C++. Nodejs is written in C, C++ and Javascript. <br /> <br />
+                        Javascript is used in frontend development.Nodejs is used in server-side development.
                     </div>
                 </div>
             </div>
