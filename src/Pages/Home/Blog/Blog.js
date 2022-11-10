@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from "react-helmet";
 
 // creating blog components.
 const Blog = () => {
@@ -165,6 +166,9 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+            <Helmet>
+                <title>Blog</title>
+            </Helmet>
         </div>
     );
 };

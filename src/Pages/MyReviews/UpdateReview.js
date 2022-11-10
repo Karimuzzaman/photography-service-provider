@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 // creating update review.
 const UpdateReview = () => {
@@ -10,7 +11,7 @@ const UpdateReview = () => {
     const handleUpdateUser = event => {
         event.preventDefault();
         console.log(review)
-        fetch(`http://localhost:5000/reviews/${storedReview._id}`, {
+        fetch(`https://photography-service-server.vercel.app/reviews/${storedReview._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -42,6 +43,9 @@ const UpdateReview = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Update-Review</title>
+            </Helmet>
             <h2 className='mt-6 text-5xl text-yellow-400 mb-5'>Please update: {storedReview.name}</h2>
 
             <form onSubmit={handleUpdateUser}>

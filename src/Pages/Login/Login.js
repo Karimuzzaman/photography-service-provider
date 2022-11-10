@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { Helmet } from "react-helmet";
 
 // creating login system
 const Login = () => {
@@ -88,6 +89,9 @@ const Login = () => {
                     <p className='mt-5 mb-5 text-yellow-500'>{error}</p>
                 </div>
             </div>
+            <Helmet>
+                <title>Login</title>
+            </Helmet>
         </div>
     );
 };

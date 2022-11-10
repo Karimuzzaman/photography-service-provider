@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const About = () => {
     const [abouts, setAbouts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/about')
+        fetch('https://photography-service-server.vercel.app/about')
             .then(res => res.json())
             .then(data => {
 

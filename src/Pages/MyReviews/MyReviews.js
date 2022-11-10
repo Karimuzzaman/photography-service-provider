@@ -3,6 +3,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import ReviewMail from './ReviewMail';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 // creating my reviews.
 const MyReviews = () => {
@@ -11,7 +12,7 @@ const MyReviews = () => {
     console.log(reviews);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?customerMail=${user?.email}`)
+        fetch(`https://photography-service-server.vercel.app/reviews?customerMail=${user?.email}`)
             .then(res => res.json())
             .then(data => {
 
@@ -23,7 +24,7 @@ const MyReviews = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete this review');
         if (proceed) {
-            fetch(`http://localhost:5000/reviews/${id}`, {
+            fetch(`https://photography-service-server.vercel.app/reviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(
@@ -44,6 +45,9 @@ const MyReviews = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Reviews</title>
+            </Helmet>
             {
                 reviews.map(review => <ReviewMail
                     key={review._id}
@@ -53,7 +57,7 @@ const MyReviews = () => {
                 </ReviewMail>)
             }
             {
-                !reviews.length && <p className='text-9xl text-red-500 text-center my-[50%]'>No Reviews were added.</p>
+                !reviews.length && <p className='text-9xl text-red-500 text-center my-[20%]'>No Reviews were added.</p>
             }
         </div>
     );

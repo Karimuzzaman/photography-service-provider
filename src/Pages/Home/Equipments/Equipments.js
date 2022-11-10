@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 const Equipments = () => {
     const [euips, setEquips] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/equipments')
+        fetch('https://photography-service-server.vercel.app/equipments')
             .then(res => res.json())
             .then(data => {
 

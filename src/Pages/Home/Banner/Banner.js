@@ -5,7 +5,7 @@ import BannerSlider from './BannerSlider';
 const Banner = () => {
     const [banners, setBanners] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/banner')
+        fetch('https://photography-service-server.vercel.app/banner')
             .then(res => res.json())
             .then(data => {
 

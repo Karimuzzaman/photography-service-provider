@@ -3,6 +3,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 // creating service all.
 const ServicesAll = () => {
@@ -11,7 +12,7 @@ const ServicesAll = () => {
 
     const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/servicesAll')
+        fetch('https://photography-service-server.vercel.app/servicesAll')
             .then(res => res.json())
             .then(data => {
                 setServices(data);
@@ -49,6 +50,9 @@ const ServicesAll = () => {
                         </div>
                     </div>)
             }
+            <Helmet>
+                <title>Services</title>
+            </Helmet>
         </div>
     );
 };

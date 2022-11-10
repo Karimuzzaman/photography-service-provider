@@ -1,6 +1,7 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet";
 
 // creating add services.
 const AddServices = () => {
@@ -34,7 +35,7 @@ const AddServices = () => {
             ]
         }
 
-        fetch('http://localhost:5000/servicesAll', {
+        fetch('https://photography-service-server.vercel.app/servicesAll', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,6 +57,9 @@ const AddServices = () => {
     }
     return (
         <div>
+            <Helmet>
+                <title>Add-Services</title>
+            </Helmet>
             <form onSubmit={handleAddService}>
                 <div className='mt-5'>
                     <p className='text-3xl text-gray-700 mb-4'>Service Title</p>

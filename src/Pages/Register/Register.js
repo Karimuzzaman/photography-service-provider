@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { Helmet } from "react-helmet";
 
 // creating register system
 const Register = () => {
@@ -91,6 +92,9 @@ const Register = () => {
                     <p className='mt-5 text-yellow-500 mb-5'>{error}</p>
                 </div>
             </div>
+            <Helmet>
+                <title>SignUp</title>
+            </Helmet>
         </div>
     );
 };

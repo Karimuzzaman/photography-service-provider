@@ -4,6 +4,7 @@ import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import ServicesReview from './ServicesReview';
+import { Helmet } from "react-helmet";
 
 
 // creating service details.
@@ -18,7 +19,7 @@ const ServicesDetails = () => {
 
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?service=${_id}`)
+        fetch(`https://photography-service-server.vercel.app/reviews?service=${_id}`)
             .then(res => res.json())
             .then(data => {
                 setReviews(data);
@@ -50,7 +51,7 @@ const ServicesDetails = () => {
             message
         };
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://photography-service-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -132,6 +133,9 @@ const ServicesDetails = () => {
                     <p className=' text-4xl text-amber-700'>Please login to add a review. <Link className='font-bold text-red-800' to='/login'>Login</Link></p>
                 }
             </div>
+            <Helmet>
+                <title>Service-Details-{_id}</title>
+            </Helmet>
         </div>
     );
 };
