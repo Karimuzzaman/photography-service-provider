@@ -21,7 +21,7 @@ const Blog = () => {
         focus:outline-none
       " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
                         aria-controls="collapseOne">
-                        Differences between SQL and NoSQL?
+                        Difference between SQL and NoSQL?
                     </button>
                 </h2>
                 <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne"
@@ -118,13 +118,13 @@ const Blog = () => {
         focus:outline-none
       " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
                         aria-controls="collapseThree">
-                        Accordion Item #3
+                        What is the difference between javascript and NodeJS ?
                     </button>
                 </h2>
                 <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree"
                     data-bs-parent="#accordionExample">
                     <div className="accordion-body py-4 px-5">
-                        <strong>This is the third item's accordion body.</strong> It is hidden by default,
+                        <strong>Answer</strong> It is hidden by default,
                         until the collapse plugin adds the appropriate classNamees that we use to style each
                         element. These classNamees control the overall appearance, as well as the showing and
                         hiding via CSS transitions. You can modify any of this with custom CSS or overriding
