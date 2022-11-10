@@ -4,7 +4,7 @@ import Banner from '../Banner/Banner';
 import Equipments from '../Equipments/Equipments';
 import Servicehome from '../Servicehome/Servicehome';
 
-
+// creating home components.
 const Home = () => {
     return (
         <div>

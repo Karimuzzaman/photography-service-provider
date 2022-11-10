@@ -1,5 +1,6 @@
 import React from 'react';
 
+// creating blog components.
 const Blog = () => {
     return (
         <div className="accordion" id="accordionExample">

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import BannerSlider from './BannerSlider';
 
+// creating banner component.
 const Banner = () => {
     const [banners, setBanners] = useState([]);
     useEffect(() => {

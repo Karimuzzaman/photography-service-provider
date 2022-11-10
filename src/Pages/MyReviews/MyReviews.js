@@ -4,6 +4,7 @@ import ReviewMail from './ReviewMail';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// creating my reviews.
 const MyReviews = () => {
     const { user } = useContext(AuthContext);
     const [reviews, setReviews] = useState([]);

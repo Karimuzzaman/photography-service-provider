@@ -5,6 +5,8 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import ServicesReview from './ServicesReview';
 
+
+// creating service details.
 const ServicesDetails = () => {
     const servicesAll = useLoaderData();
     const { title, description, img, price, services, _id } = servicesAll;

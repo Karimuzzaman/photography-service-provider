@@ -4,6 +4,7 @@ import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
+// creating service all.
 const ServicesAll = () => {
     const { loading } = useContext(AuthContext);
 

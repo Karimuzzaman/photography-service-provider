@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 
+// creating update review.
 const UpdateReview = () => {
     const storedReview = useLoaderData();
     const [review, setReview] = useState(storedReview);

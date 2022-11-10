@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// creating review by mail.
 const ReviewMail = ({ review, handleDelete }) => {
     const { message, customerPic, customer, serviceName, service, customerMail, _id } = review;
     // console.log(message);

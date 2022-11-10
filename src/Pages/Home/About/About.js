@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
+
+
+// creating about component.
 const About = () => {
     const [abouts, setAbouts] = useState([]);
     useEffect(() => {

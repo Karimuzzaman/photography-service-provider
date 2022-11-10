@@ -1,5 +1,6 @@
 import React from 'react';
 
+// creating service review.
 const ServicesReview = ({ review }) => {
     const { message, customerPic, customer, serviceName, service, customerMail } = review;
 

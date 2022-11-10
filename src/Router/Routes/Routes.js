@@ -11,6 +11,7 @@ import UpdateReview from "../../Pages/MyReviews/UpdateReview";
 import Register from "../../Pages/Register/Register";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
+// creating router
 const router = createBrowserRouter([
     {
         path: '/',

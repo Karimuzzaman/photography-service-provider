@@ -4,6 +4,7 @@ import { initializeApp } from "firebase/app";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
 const firebaseConfig = {
     apiKey: "AIzaSyAknX_DtSLk9xGkUHVt2PbSEAQI6s3RITw",
     authDomain: "photography-client.firebaseapp.com",

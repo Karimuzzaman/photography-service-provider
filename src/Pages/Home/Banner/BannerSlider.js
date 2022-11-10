@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+// creating bannerslider.
 const BannerSlider = ({ banner }) => {
     const { img, next, prev, img_id } = banner;
     return (

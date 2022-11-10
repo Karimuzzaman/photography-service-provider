@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+
+// creating equipments components.
 const Equipments = () => {
     const [euips, setEquips] = useState([]);
     useEffect(() => {
