@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 
 const ServicesAll = () => {
+    const { loading } = useContext(AuthContext);
+
+
     const [services, setServices] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/servicesAll')
@@ -11,7 +15,15 @@ const ServicesAll = () => {
             .then(data => {
                 setServices(data);
             })
-    }, [])
+    }, []);
+
+    if (loading) {
+        return <h1 className='text-5xl'><div className="flex justify-center items-center">
+            <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div></h1>
+    }
     return (
         <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mt-6 bg-purple-300 gap-5'>
             {

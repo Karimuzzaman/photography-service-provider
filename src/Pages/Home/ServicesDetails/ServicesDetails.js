@@ -11,20 +11,27 @@ const ServicesDetails = () => {
     const [first, second] = services;
     const { name1, events1, description1 } = first;
     const { name2, events2, description2 } = second;
-    const { user } = useContext(AuthContext);
-    const [reviews, setReviews] = useState([]);
+    const { user, loading } = useContext(AuthContext);
 
+
+    const [reviews, setReviews] = useState([]);
     useEffect(() => {
         fetch(`http://localhost:5000/reviews?service=${_id}`)
             .then(res => res.json())
             .then(data => {
-
                 setReviews(data);
+
             })
 
     }, [_id])
 
-
+    if (loading) {
+        return <h1 className='text-5xl'><div className="flex justify-center items-center">
+            <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div></h1>
+    }
 
     const handleAddReview = event => {
         event.preventDefault();

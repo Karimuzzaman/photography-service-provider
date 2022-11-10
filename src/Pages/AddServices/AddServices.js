@@ -17,7 +17,20 @@ const AddServices = () => {
             img: servicePicture,
             rating: serviceRating,
             price: servicePrice,
-            description: serviceDescription
+            description: serviceDescription,
+            services: [
+                {
+                    name1: serviceTitle,
+                    events1: servicePrice,
+                    description1: serviceRating
+                },
+                {
+                    name2: serviceTitle,
+                    events2: servicePrice,
+                    description2: serviceRating
+                }
+
+            ]
         }
 
         fetch('http://localhost:5000/servicesAll', {

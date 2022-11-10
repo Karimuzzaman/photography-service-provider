@@ -14,8 +14,8 @@ const Header = () => {
         <div className="navbar bg-zinc-400 mt-5">
             <div className="flex-1 flex-col md:flex-row">
                 <Link className='mr-6 text-2xl text-purple-800' to='/'>Home</Link>
-                <Link className='mr-6 text-2xl text-purple-800' to='/login'>Login</Link>
-                <Link className='text-2xl text-purple-800 mr-6' to='/'>Blog</Link>
+                <Link className='mr-6 text-2xl text-purple-800' to='/services'>Services</Link>
+                <Link className='text-2xl text-purple-800 mr-6' to='/blogs'>Blog</Link>
                 {
                     user?.uid ?
                         <>

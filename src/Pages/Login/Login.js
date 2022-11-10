@@ -8,12 +8,21 @@ import { GoogleAuthProvider } from 'firebase/auth';
 const Login = () => {
 
     const [error, setError] = useState('');
-    const { signIn, googleProviderLogin } = useContext(AuthContext);
+    const { signIn, googleProviderLogin, loading } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const googleProvider = new GoogleAuthProvider();
 
     const from = location.state?.from?.pathname || '/';
+
+
+    if (loading) {
+        return <h1 className='text-5xl'><div className="flex justify-center items-center">
+            <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </div>
+        </div></h1>
+    };
 
     const handleGoogleSignIn = () => {
         googleProviderLogin(googleProvider)
@@ -36,7 +45,7 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                //console.log(user);
                 form.reset();
                 setError('');
                 navigate(from, { replace: true });
